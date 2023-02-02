@@ -8,10 +8,10 @@ export class Transaction {
     id: number
 
     @Column()
-    type: boolean
+    type: string;
     
     @Column()
-    amount: number
+    amount: number;
 
     @ManyToOne(() => Wallet, (wallet) => wallet.transactions)
     owner:Transaction
